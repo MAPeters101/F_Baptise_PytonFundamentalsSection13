@@ -98,10 +98,24 @@ d = {'a':1, 'b':2, 'c':-10}
 print(is_all_positive(d.values()))
 
 
+def gen_matrix(m,n, default_value):
+    return [[default_value for i in range(n)] for j in range(m)]
+
+print(gen_matrix(2, 2, 1))
+print(gen_matrix(4, 8, 1))
 
 
+def gen_matrix(rows, cols, default_value):
+    return [[default_value for i in range(cols)] for j in range(rows)]
 
-
+print(gen_matrix(2, 2, 2))
+print(gen_matrix(4, 8, 2))
+print(gen_matrix(rows=4, cols=8, default_value=2))
+print(gen_matrix(cols=8, rows=4, default_value=3))
+print('='*30)
+#print(gen_matrix(5, rows=4, default_value=10))
+print(gen_matrix(5, cols=4, default_value=10))
+#print(gen_matrix(5, cols=4, 10))
 
 
 
