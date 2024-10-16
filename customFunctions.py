@@ -58,14 +58,49 @@ print(find_max(10, 20, 30))
 
 from datetime import datetime
 
-def log(message):
-    curr_time = datetime.utcnow().isoformat()
-    #curr_time = datetime.now(datetime.UTC)
-    print(f'{curr_time} - [{message}]')
+# def log(message):
+#     curr_time = datetime.utcnow().isoformat()
+#     #curr_time = datetime.datetime.now(datetime.UTC)
+#     print(f'{curr_time} - [{message}]')
+#
+# result = log('Log 1')
+# print(result, type(result))
+# result = log('Log 2')
+#
 
-result = log('Log 1')
-print(result, type(result))
-result = log('Log 2')
+data = [1, 2, 3, 4, 5, 6]
+for element in data:
+    if element < 0:
+        break
+else:
+    print('Processing all positive elements')
+
+data = [1, 2, 3, 4, 5, 6, -1]
+for element in data:
+    if element < 0:
+        break
+else:
+    print('Processing all positive elements')
+
+def is_all_positive(data):
+    for element in data:
+        if element < 0:
+            return False
+    return True
+
+
+print(is_all_positive([1, 2, 3, 4]))
+print(is_all_positive([10, 3, -4, 100]))
+print(is_all_positive(range(1, 10)))
+print(is_all_positive(range(10, -20, -2)))
+print(is_all_positive(range(10, -20, -2)))
+d = {'a':1, 'b':2, 'c':-10}
+print(is_all_positive(d.values()))
+
+
+
+
+
 
 
 
