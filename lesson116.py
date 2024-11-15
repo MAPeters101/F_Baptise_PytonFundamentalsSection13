@@ -115,5 +115,67 @@ print()
 print('-'*30)
 
 
+def process_data(data, item_sep=',', line_sep='\n'):
+    row_strings = [
+        item_sep.join(str(el) for el in row)
+        for row in data
+    ]
+    return line_sep.join(row_strings)
+
+print(process_data(data))
+print('done')
+print()
+print('-'*20)
+
+
+def process_row(row, item_sep):
+    return item_sep.join(str(el) for el in row)
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    row_strings = [process_row(row, item_sep) for row in data]
+    return line_sep.join(row_strings)
+
+print(process_data(data))
+print('done')
+print()
+
+print(process_data(data, item_sep='|'))
+print('done')
+print()
+
+print(process_data(data, item_sep='|', line_sep='\n\n'))
+print('done')
+print()
+
+
+print('-'*20)
+
+def process_row(row, item_sep):
+    return item_sep.join(str(el) for el in row)
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    row_strings = (process_row(row, item_sep) for row in data)
+    return line_sep.join(row_strings)
+
+print(process_data(data))
+print('done')
+print()
+
+print(process_data(data, item_sep='|'))
+print('done')
+print()
+
+print(process_data(data, item_sep='|', line_sep='\n\n'))
+print('done')
+print()
+
+
+print('-'*20)
+
+
+
+
+
+
 
 
