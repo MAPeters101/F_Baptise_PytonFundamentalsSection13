@@ -50,6 +50,37 @@ print(*'abc', sep=',', end='***\n')
 print('next print line')
 print()
 
+print('='*80)
+
+data = [
+    [10, 20, 30],
+    [100, 200, 300],
+    [1000, 2000, 3000]
+]
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    output = ''
+
+    for row in data:
+        for element in row:
+            output += str(element) + item_sep
+        output += line_sep
+
+    return output
+
+print(process_data(data))
+print(process_data(data, item_sep='==', line_sep='\n\n'))
+
+print(process_data(data))
+print('done')
+print()
+
+
+print('-'.join(['a', 'b', 'c']))
+print(','.join(['a', 'b', 'c']))
+
+
+
 
 
 
