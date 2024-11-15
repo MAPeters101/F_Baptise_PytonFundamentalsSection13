@@ -78,9 +78,41 @@ print()
 
 print('-'.join(['a', 'b', 'c']))
 print(','.join(['a', 'b', 'c']))
+print()
 
 
+def process_data(data, item_sep=',', line_sep='\n'):
+    output = ''
+    for row in data:
+        row_str = item_sep.join([str(el) for el in row])
+        output += row_str + line_sep
+    return output
 
+print(process_data(data))
+print('done')
+print()
+
+print(process_data(data, line_sep='=='))
+print('done')
+print()
+print('-'*30)
+
+
+def process_data(data, item_sep=',', line_sep='\n'):
+    output = ''
+    for row in data:
+        row_str = item_sep.join(str(el) for el in row)
+        output += row_str + line_sep
+    return output
+
+print(process_data(data))
+print('done')
+print()
+
+print(process_data(data, line_sep='=='))
+print('done')
+print()
+print('-'*30)
 
 
 
