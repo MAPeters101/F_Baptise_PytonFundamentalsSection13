@@ -38,6 +38,17 @@ print(parse('a:b : c: d'))
 print(parse('a:b : c: d', sep=':'))
 print(parse('a\n|b\n|c\n', sep='|'))
 print(parse('a\n|b\n|c\n', sep='|', strip=False))
+print()
+
+
+print('a', 'b', 'c', sep='---')
+print(*'abc', sep=',', end='***')
+print('next print line')
+print()
+
+print(*'abc', sep=',', end='***\n')
+print('next print line')
+print()
 
 
 
